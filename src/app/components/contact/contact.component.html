@@ -1,0 +1,26 @@
+<h2 class="contacto-h2">Contacto</h2>
+<p class="hola-contacto">Hola {{ firstName }} {{ lastName }}¿Cómo podemos ayudarte?</p>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">Nombre:</label>
+    <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required>
+  </div>
+
+  <div>
+    <label for="lastName">Apellidos:</label>
+    <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" required>
+  </div>
+
+  <div>
+    <label for="phone">Número de Teléfono:</label>
+    <input type="tel" id="phone" [(ngModel)]="phone" name="phone" required>
+  </div>
+
+  <div>
+    <label for="message">Mensaje:</label>
+    <textarea id="message" [(ngModel)]="message" name="message" rows="4" required></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
+

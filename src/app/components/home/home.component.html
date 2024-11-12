@@ -1,0 +1,13 @@
+<h1>Librería Sueña</h1>
+<h2>Top Ventas</h2>
+
+<div class="libros">
+  <div class="libro" *ngFor="let book of books" (click)="onSelectBook(book.title)">
+    <div class="book-title">{{ book.title }}</div>
+    <div class="book-author">{{ book.author }}</div>
+  </div>
+</div>
+
+<div [hidden]="!selectedBook">
+  <p>Seleccionaste el libro: {{ selectedBook }}</p>
+</div>
